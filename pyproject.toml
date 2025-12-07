@@ -1,0 +1,19 @@
+[project]
+name = "pilulas-de-conhecimento"
+version = "0.1.0"
+description = "Projeto criado para agrupar pilulas de conhecimento sobre Python e programação em geral."
+authors = [
+    {name = "Paulo Lima",email = "paulojanderson.7@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic (>=2.12.5,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "pilulas_de_conhecimento", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
