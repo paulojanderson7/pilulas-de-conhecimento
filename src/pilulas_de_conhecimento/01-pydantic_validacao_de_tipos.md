@@ -1,7 +1,7 @@
 ## 01. Pydantic - Validação de Tipos<br>
 
 O Pydantic é uma biblioteca Python utilizada para validação de tipos.<br>
-Quando criamos um modelo, podemos herdá-lo da classe pydantic.BaseModel e especificar os atributos e seus tipos.<br>
+Quando criamos um modelo, podemos herdá-lo da classe `pydantic.BaseModel` e especificar os atributos e seus tipos.<br>
 Dessa forma, ao criar uma instância dessa classe, o Pydantic faz uma validação dos tipos dos atributos.<br>
 
 ```python
@@ -40,5 +40,6 @@ except ValidationError as e:
 **Para que é usado:**<br>
 Na criação de API's é comum definir o *Schema*, ou seja, o que se espera como parâmetros de entrada daquela requisição.<br>
 Com isso, ao receber uma requisição na API, o Pydantic valida os tipos dos parâmetros passados.<br>
-Caso o usuário enviar um parâmetro inválido, a aplicação não quebra tentando tratar algo para a qual não foi programada.<br>
-Além disso, é possivel retornar ao solicitante uma mensagem **422 Unprocessable Entity.** indicando que houve um erro de validação.
+
+Caso o usuário envie um parâmetro inválido, a aplicação não quebra tentando tratar algo para o qual não foi programada.<br>
+Além disso, é possivel retornar ao solicitante uma mensagem `422 Unprocessable Entity`. indicando que houve um erro de validação.
